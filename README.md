@@ -1,9 +1,9 @@
-# Yoshunko
+# yoshunko_modify
 # ![title](assets/img/title.png)
 
 [[English]](README_EN.md)
 
-**Yoshunko** คือโปรแกรมจำลองเซิร์ฟเวอร์ (Server Emulator) สำหรับเกม **Zenless Zone Zero** พัฒนาและดูแลโดย **xeroxua** โดยมีเป้าหมายหลักคือการมอบฟีเจอร์ที่หลากหลายและการปรับแต่งที่ยืดหยุ่น ในขณะที่ยังคงรักษาความเรียบง่ายของโค้ดไว้ **Yoshunko** ไม่มีการใช้ไลบรารีภายนอก (Third-party dependencies) ยกเว้น Zig standard library เท่านั้น
+**yoshunko_modify** คือโปรแกรมจำลองเซิร์ฟเวอร์ (Server Emulator) สำหรับเกม **Zenless Zone Zero** ดัดแปลงและดูแลโดย **xeroxua** โดยมีเป้าหมายหลักคือการมอบฟีเจอร์ที่หลากหลายและการปรับแต่งที่ยืดหยุ่น ในขณะที่ยังคงรักษาความเรียบง่ายของโค้ดไว้ **yoshunko_modify** ไม่มีการใช้ไลบรารีภายนอก (Third-party dependencies) ยกเว้น Zig standard library เท่านั้น
 
 ## เริ่มต้นใช้งาน
 ### สิ่งที่จำเป็น
@@ -21,13 +21,14 @@
 #### การ Build จากซอร์สโค้ด
 ```sh
 # เข้าไปยังโฟลเดอร์โปรเจกต์
-cd yoshunko
+git clone https://git.xeondev.com/yoshunko/yoshunko_modify.git
+cd yoshunko_modify
 zig build run-dpsv &
 zig build run-gamesv
 ```
 
 ### การตั้งค่า (Configuration)
-**Yoshunko** ไม่มีไฟล์ตั้งค่า (Config file) โดยเฉพาะ แต่สามารถปรับเปลี่ยนพฤติกรรมได้ผ่านการจัดการโฟลเดอร์ `state`:
+**yoshunko_modify** ไม่มีไฟล์ตั้งค่า (Config file) โดยเฉพาะ แต่สามารถปรับเปลี่ยนพฤติกรรมได้ผ่านการจัดการโฟลเดอร์ `state`:
 - **Regions**: รายชื่อโซนที่ `dpsv` ให้บริการ จะถูกกำหนดไว้ในโฟลเดอร์ `state/gateway`
 - **Player Data**: ข้อมูลของผู้เล่นแต่ละคนจะถูกเก็บในรูปแบบไฟล์ระบบ อยู่ที่โฟลเดอร์ `state/player/[UID]` ไฟล์เหล่านี้สามารถแก้ไขได้ตลอดเวลา และเซิร์ฟเวอร์จะทำการโหลดข้อมูลใหม่ (Hot-reload) และซิงค์ข้อมูลกับตัวเกมทันที
 
@@ -39,6 +40,9 @@ zig build run-gamesv
 
 ## คอมมูนิตี้
 - [Discord Server ของเรา](https://discord.gg/QwfTnEdAtN)
+
+## ที่มา
+- [Yoshunko](https://git.xeondev.com/yoshunko/yoshunko)
 
 ---
 *ดูแลโดย ❤️ xeroxua*

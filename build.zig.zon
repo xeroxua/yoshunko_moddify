@@ -1,5 +1,5 @@
 .{
-    .name = .yoshunko,
+    .name = .yoshunko_modify,
     .version = "0.0.1",
     .minimum_zig_version = "0.16.0-dev.1470+32dc46aae",
     .paths = .{""},

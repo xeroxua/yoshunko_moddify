@@ -11,7 +11,7 @@ pub fn build(b: *std.Build) void {
     });
 
     const proto_gen = b.addExecutable(.{
-        .name = "yoshunko-protogen",
+        .name = "yoshunko_modify-protogen",
         .root_module = b.createModule(.{
             .root_source_file = b.path("proto/gen/src/main.zig"),
             .optimize = optimize,
@@ -36,7 +36,7 @@ pub fn build(b: *std.Build) void {
     });
 
     const dpsv_exe = b.addExecutable(.{
-        .name = "yoshunko-dpsv",
+        .name = "yoshunko_modify-dpsv",
         .root_module = b.createModule(.{
             .root_source_file = b.path("dpsv/src/main.zig"),
             .target = target,
@@ -46,7 +46,7 @@ pub fn build(b: *std.Build) void {
     });
 
     const gamesv_exe = b.addExecutable(.{
-        .name = "yoshunko-gamesv",
+        .name = "yoshunko_modify-gamesv",
         .root_module = b.createModule(.{
             .root_source_file = b.path("gamesv/src/main.zig"),
             .target = target,

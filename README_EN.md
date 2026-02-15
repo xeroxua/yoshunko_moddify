@@ -1,9 +1,9 @@
-# Yoshunko
+# yoshunko_modify
 # ![title](assets/img/title.png)
 
 [[ภาษาไทย]](README.md)
 
-**Yoshunko** is a server emulator for the game **Zenless Zone Zero**, maintained and developed by **xeroxua**. Its main goal is to provide rich functionality and customization capabilities while keeping the codebase simple. **Yoshunko** doesn't use any third-party dependencies, except for the Zig standard library.
+**yoshunko_modify** is a server emulator for the game **Zenless Zone Zero**, maintained and modified by **xeroxua**. Its main goal is to provide rich functionality and customization capabilities while keeping the codebase simple. **yoshunko_modify** doesn't use any third-party dependencies, except for the Zig standard library.
 
 ## Getting started
 ### Requirements
@@ -21,13 +21,14 @@
 #### Building from sources
 ```sh
 # Clone the repository (if not already present)
-cd yoshunko
+git clone https://git.xeondev.com/yoshunko/yoshunko_modify.git
+cd yoshunko_modify
 zig build run-dpsv &
 zig build run-gamesv
 ```
 
 ### Configuration
-**Yoshunko** doesn't have a config file in particular; however, its behavior can be modified by manipulating the `state` directory. 
+**yoshunko_modify** doesn't have a config file in particular; however, its behavior can be modified by manipulating the `state` directory. 
 - **Regions**: The list of regions the `dpsv` serves to clients is defined under the `state/gateway` directory. 
 - **Player Data**: The state of each player is represented as a file system, located under `state/player/[UID]`. State files can be edited at any time, and the server will hot-reload and synchronize the changes with the client immediately.
 
@@ -39,6 +40,9 @@ Currently supported client version is `CNBetaWin2.7.1`.
 
 ## Community
 - [Our Discord Server](https://discord.gg/QwfTnEdAtN)
+
+## Source
+[Yoshunko](https://git.xeondev.com/yoshunko/yoshunko)
 
 ---
 *Maintained by ❤️ xeroxua*
