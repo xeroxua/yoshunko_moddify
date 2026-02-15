@@ -1,0 +1,6 @@
+zig-out/
+.zig-cache/
+
+/proto/pb/
+/proto/pb/*.proto
+/state/player/1/
