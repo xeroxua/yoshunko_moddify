@@ -1,42 +1,44 @@
 # Yoshunko
 # ![title](assets/img/title.png)
 
-**Yoshunko** is a server emulator for the game **Zenless Zone Zero**, maintained and developed by **xeroxua**. Its main goal is to provide rich functionality and customization capabilities while keeping the codebase simple. **Yoshunko** doesn't use any third-party dependencies, except for the Zig standard library.
+[[English]](README_EN.md)
 
-## Getting started
-### Requirements
+**Yoshunko** คือโปรแกรมจำลองเซิร์ฟเวอร์ (Server Emulator) สำหรับเกม **Zenless Zone Zero** พัฒนาและดูแลโดย **xeroxua** โดยมีเป้าหมายหลักคือการมอบฟีเจอร์ที่หลากหลายและการปรับแต่งที่ยืดหยุ่น ในขณะที่ยังคงรักษาความเรียบง่ายของโค้ดไว้ **Yoshunko** ไม่มีการใช้ไลบรารีภายนอก (Third-party dependencies) ยกเว้น Zig standard library เท่านั้น
+
+## เริ่มต้นใช้งาน
+### สิ่งที่จำเป็น
 - [Zig 0.16.0-dev.1470](https://store2.gofile.io/download/web/e5598401-64b5-4759-9f0d-85a1ba370d77/x86_64-linux-0.16.0-dev.1470%2B32dc46aae.tar.xz)
 - [SDK Server](https://git.xeondev.com/reversedrooms/hoyo-sdk/releases)
 - [Tentacle](https://github.com/xeerookuma-dev/Custom-Patch-Sen-Z)
 - [KCPShim](https://git.xeondev.com/xeon/kcpshim)
 
-##### NOTE: This server doesn't include the SDK server as it's not specific per game. You can use it alongside this server.
-##### NOTE 2: This server only works on real operating systems, such as GNU/Linux. If you don't have one, you can use `WSL`.
+##### หมายเหตุ: เซิร์ฟเวอร์นี้ไม่มี SDK Server มาให้ในตัว เนื่องจากไม่ได้เจาะจงเฉพาะเกมใดเกมหนึ่ง คุณสามารถใช้ `hoyo-sdk` ร่วมกับเซิร์ฟเวอร์นี้ได้
+##### หมายเหตุ 2: เซิร์ฟเวอร์นี้ทำงานบนระบบปฏิบัติการจริงๆ เท่านั้น เช่น GNU/Linux หากคุณไม่มี สามารถใช้งานผ่าน `WSL` ได้
 
-#### For additional help, you can join our [Discord Server](https://discord.gg/QwfTnEdAtN)
+#### หากต้องการความช่วยเหลือเพิ่มเติม สามารถเข้าร่วม [Discord Server](https://discord.gg/QwfTnEdAtN) ของเราได้
 
-### Setup
-#### Building from sources
+### การติดตั้ง
+#### การ Build จากซอร์สโค้ด
 ```sh
-# Clone the repository (if not already present)
+# เข้าไปยังโฟลเดอร์โปรเจกต์
 cd yoshunko
 zig build run-dpsv &
 zig build run-gamesv
 ```
 
-### Configuration
-**Yoshunko** doesn't have a config file in particular; however, its behavior can be modified by manipulating the `state` directory. 
-- **Regions**: The list of regions the `dpsv` serves to clients is defined under the `state/gateway` directory. 
-- **Player Data**: The state of each player is represented as a file system, located under `state/player/[UID]`. State files can be edited at any time, and the server will hot-reload and synchronize the changes with the client immediately.
+### การตั้งค่า (Configuration)
+**Yoshunko** ไม่มีไฟล์ตั้งค่า (Config file) โดยเฉพาะ แต่สามารถปรับเปลี่ยนพฤติกรรมได้ผ่านการจัดการโฟลเดอร์ `state`:
+- **Regions**: รายชื่อโซนที่ `dpsv` ให้บริการ จะถูกกำหนดไว้ในโฟลเดอร์ `state/gateway`
+- **Player Data**: ข้อมูลของผู้เล่นแต่ละคนจะถูกเก็บในรูปแบบไฟล์ระบบ อยู่ที่โฟลเดอร์ `state/player/[UID]` ไฟล์เหล่านี้สามารถแก้ไขได้ตลอดเวลา และเซิร์ฟเวอร์จะทำการโหลดข้อมูลใหม่ (Hot-reload) และซิงค์ข้อมูลกับตัวเกมทันที
 
-### Logging in
-Currently supported client version is `CNBetaWin2.7.1`.
+### การเข้าสู่ระบบ
+เวอร์ชั่นตัวเกมที่รองรับในปัจจุบันคือ `CNBetaWin2.7.1`
 
-1. Apply the necessary **Client Patch** (Tentacle). It allows you to connect to the local server and replaces encryption keys with custom ones.
-2. Run **KCPShim**. It acts like a middleman, translating packets sent between client and server over KCP to TCP and vice versa.
+1. ติดตั้ง **Client Patch** (Tentacle) ที่จำเป็น เพื่อให้สามารถเชื่อมต่อกับเซิร์ฟเวอร์โลคอลได้ และเปลี่ยนคีย์เข้ารหัสเป็นคีย์แบบกำหนดเอง
+2. รัน **KCPShim** ซึ่งทำหน้าที่เป็นตัวกลางในการแปลงแพ็กเก็ตระหว่าง Client และ Server ผ่าน KCP เป็น TCP และในทางกลับกัน
 
-## Community
-- [Our Discord Server](https://discord.gg/QwfTnEdAtN)
+## คอมมูนิตี้
+- [Discord Server ของเรา](https://discord.gg/QwfTnEdAtN)
 
 ---
-*Maintained by ❤️ xeroxua*
+*ดูแลโดย ❤️ xeroxua*
