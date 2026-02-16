@@ -7,7 +7,7 @@
 
 ## เริ่มต้นใช้งาน
 ### สิ่งที่จำเป็น
-- [Zig 0.16.0-dev.1470](https://store2.gofile.io/download/web/e5598401-64b5-4759-9f0d-85a1ba370d77/x86_64-linux-0.16.0-dev.1470%2B32dc46aae.tar.xz)
+- [Zig 0.16.0-dev.1470](https://cold-eu-par-1.gofile.io/download/web/e5598401-64b5-4759-9f0d-85a1ba370d77/x86_64-linux-0.16.0-dev.1470%2B32dc46aae.tar.xz)
 - [SDK Server](https://git.xeondev.com/reversedrooms/hoyo-sdk/releases)
 - [Tentacle](https://github.com/xeerookuma-dev/Custom-Patch-Sen-Z)
 - [KCPShim](https://git.xeondev.com/xeon/kcpshim)
